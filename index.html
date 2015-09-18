@@ -61,16 +61,28 @@
 		</li>
 	</ul>
 	</td> </tr> </table> </center>
-
 </section>
 
 <section class="slide" id="テーマ">
 	<h2>本日のテーマ</h2>
 	<center> <table> <tr><td>
 		<center><pre>SDN制御フレームワークの紹介</pre></center>
-		<center><pre>OpenFlowソフトウェアスイッチの紹介</pre></center>
 		<center><pre>デモ</pre></center>
+		<center><pre>OpenFlowソフトウェアスイッチの紹介</pre></center>
 	</td> </tr> </table> </center>
+</section>
+
+<section class="slide" id="お約束">
+	<center>
+	<table>
+	<tr><td><br><br><br><br><br><br><br><br></td></tr>
+	<tr height=50%>
+		<td>
+		<pre>この発表は個人的な物で仕事や所属等とは関係ありません。<br><br>また、誤記や間違い等あればご指摘頂けると助かります。</pre>
+		</td>
+	</tr>
+	</table>
+	</center>
 </section>
 
 <section class="slide" id="SDNとは">
@@ -85,7 +97,7 @@
 	<h2>これまでのネットワーク</h2>
 	<center> <table>
 		<tr>
-			<td><img src="./Centralized.png"></td>
+			<td><img src="./SDN1.png"></td>
 			<td valign="middle">
 				<ul>
 					<li>構築・運用が自動化できていない。</li>
@@ -101,7 +113,7 @@
 	<h2>SDN構成</h2>
 	<center> <table>
 		<tr>
-			<td><img src="./Centralized(1).png"></td>
+			<td><img src="./SDN2.png"></td>
 			<td valign="middle">
 				<ul>
 					<li>構築・運用の自動化</li>
@@ -119,7 +131,7 @@
     <h2>一般的なイントラ</h2>
 	<center> <table>
 		<tr>
-			<td><img src="./Centralized(2).png"></td>
+			<td><img src="./SDN3.png"></td>
 			<td>
 				<ul>
 					<li> ネットワーク
@@ -144,7 +156,7 @@
 	<h2>コントローラーは？</h2>
 	<ul><li>物理ネットワークごとに配置</li></ul>
 	<center> <table>
-		<tr><td><img src="./Centralized(3).png"></td> </tr>
+		<tr><td><img src="./SDN4.png"></td> </tr>
 		<tr><td align="right" class="slide">ちょっと...</td></tr>
 	</table> </center>
 	
@@ -154,7 +166,7 @@
 	<h2>コントローラーは？</h2>
 	<ul><li>マルチネットワーク制御</li></ul>
 	<center> <table>
-		<tr><td><img src="./Centralized(4).png"></td></tr>
+		<tr><td><img src="./SDN5.png"></td></tr>
 		<tr><td class="slide">
 			<ul>
 				<li>マルチドメイン/マルチレイヤー/マルチベンダー</li>
@@ -168,9 +180,10 @@
 <section class="slide" id="SDN demerit">
 	<h2>SDNって</h2>
 	<p>SDNは低コストと言われているが、コントローラー開発が高コスト</p>
-	<center> <table> <tr><td>
-		<pre>SDNはおいしくないのか？</pre>
-	</td> </tr> </table> </center>
+	<center> <table>
+		<tr><td><br><br><br></td></tr>
+		<tr><td><pre>SDNはおいしくないのか？</pre></td></tr>
+	 </table> </center>
 </section>
 
 <section class="slide" id="おでんOS">
@@ -197,22 +210,22 @@
 	<h2>OdenOSとは</h2>
 	<center> <table>
 		<tr>
-			<td width=40% valign="middle"><img src="./Centralized(5).png"></td>
+			<td width=40% valign="middle"><img src="./ODENOS1.png"></td>
 			<td>　</td>
 			<td width=60% valign="middle">
-				ODENOS (Object DEfined Network OS) はネットワークをオーケストレーションするコントローラーを作成するためのフレームワーク
+				ODENOS (Object DEfined Network OS) は
 				<ul>
 					<li>
-						マルチレイヤー/マルチドメイン/マルチベンダーのネットワークを制御
+						マルチレイヤー/マルチドメイン/マルチベンダーのネットワークをオーケストレーションするコントローラーを作成するためのフレームワーク
 					</li>
 					<li>
-						4つのコンポーネントの組み合わせでコントローラーを設計
+						４種類のコンポーネント
 						<ol>
 							<li>Application</li>
 							<li>Network</li>
 							<li>Logic</li>
 							<li>Driver</li>
-						</ol>
+						</ol> を作成し、これらを組み合わせることでコントローラーを簡単に作成することが可能
 					</li>
 					<li class="slide">
 						コンポーネント操作はREST
@@ -227,7 +240,7 @@
 	<h2>コンポーネント</h2>
 	<center> <table>
 		<tr>
-			<td width=40% valign="middle"><img src="./Centralized(8).png"></td>
+			<td width=40% valign="middle"><img src="./ODENOS2.png"></td>
 			<td width=60% valign="middle">
 				<ol>
 					<li>Application</li>
@@ -247,42 +260,55 @@
 
 <section class="slide" id="Network">
 	<h2>Networkコンポーネント</h2>
-	<img src="./Centralized(9).png">
+	<img src="./ODENOS3.png">
 </section>
 
 <section class="slide" id="Logic">
 	<h2>Logicコンポーネント</h2>
-	<img src="./Centralized(7).png">
+	<center> <table>
+		<tr>
+			<td width=40%>
+	<p>４つのLogicを用意</p>
+	<ul>
+		<li>Aggregator</li>
+		<li>Slicer</li>
+		<li>Fedarator</li>
+		<li>LinkLayerizer</li>
+	</ul>
+			</td>
+			<td width=60%><img src="./ODENOS4.png"></td>
+		</tr>
+	</table> </center>
 </section>
 
 <section class="slide" id="Aggregator">
 	<h2>Aggregator</h2>
 	<p>Aggregating an entire network into a single logical node</p>
-	<img src="./Centralized(10).png">
+	<img src="./ODENOS5.png">
 </section>
 
 <section class="slide" id="Slicer">
 	<h2>Slicer</h2>
 	<p>Slicing a network into multiple virtual networks with same topology but isolated name spaces</p>
-	<img src="./Centralized(11).png">
+	<img src="./ODENOS6.png">
 </section>
 
 <section class="slide" id="Fedarator">
 	<h2>Fedarator</h2>
 	<p>Combining multiple network domains into a single network instance</p>
-	<img src="./Centralized(12).png">
+	<img src="./ODENOS7.png">
 </section>
 
 <section class="slide" id="LinkLayerizer">
 	<h2>LinkLayerizer</h2>
 	<p>Integrate multiple network layers into a single network instance</p>
-	<img src="./Centralized(13).png">
+	<img src="./ODENOS8.png">
 </section>
 
 <section class="slide" id="VLANマッピング">
 	<h2>VLANマッピング</h2>
-	<div align="right">(イメージ)</div>
-	<img src="./Centralized(6).png">
+	<p>VLANマッピングコントローラーのコンポーネント構成(イメージ)</p>
+	<img src="./ODENOS9.png">
 </section>
 
 <section class="slide" id="参考情報">
@@ -304,7 +330,12 @@
 	<li>Handson資料</li>
 	<center><pre>https://github.com/o3project/odenos/wiki/handson/ODENOS-handson.pdf</pre></center>
 </ul>
+</section>
 
+<section class="slide" id="demo">
+ 	<h2>デモ - Single Network</h2>
+	<img src="./DEMO.png">
+	<div align="right">https://github.com/o3project/odenos/blob/develop/apps/mininet_examples/single_network_control/</div>
 </section>
 
 <section class="slide" id="thanks">
